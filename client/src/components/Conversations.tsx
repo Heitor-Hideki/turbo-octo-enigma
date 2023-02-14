@@ -1,5 +1,5 @@
 import { ListGroup } from "react-bootstrap";
-import { useConversations } from "./ConversationsProvider";
+import { useConversations } from "../context/ConversationsProvider";
 
 export default function Conversations() {
     const { conversations, selectConversationIndex } = useConversations();

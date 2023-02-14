@@ -3,17 +3,20 @@ import Login from './Login';
 import useLocalStorage from '../hooks/useLocalStorage';
 import Dashboard from './Dashboard';
 import { ContactsProvider } from '../context/ContactsProvider';
-import { ConversationsProvider } from './ConversationsProvider';
+import { ConversationsProvider } from '../context/ConversationsProvider';
+import { SocketProvider } from '../context/SocketProvider';
 
 function App() {
   const [id, setId] = useLocalStorage('id', '');
 
   const dashboard = (
-    <ContactsProvider>
-      <ConversationsProvider id={id}>
-        <Dashboard id={id} />
-      </ConversationsProvider>
-    </ContactsProvider>
+    <SocketProvider id={id}>
+      <ContactsProvider>
+        <ConversationsProvider id={id}>
+          <Dashboard id={id} />
+        </ConversationsProvider>
+      </ContactsProvider>
+    </SocketProvider>
   )
 
   return (

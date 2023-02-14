@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
-import { useConversations } from "./ConversationsProvider";
+import { useConversations } from "../context/ConversationsProvider";
 
 export default function OpenConversation() {
     const [text, setText] = useState("");

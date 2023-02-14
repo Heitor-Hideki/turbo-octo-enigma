@@ -1,4 +1,4 @@
-import { useConversations } from "./ConversationsProvider";
+import { useConversations } from "../context/ConversationsProvider";
 import OpenConversation from "./OpenConversation";
 import Sidebar from "./Sidebar";
 

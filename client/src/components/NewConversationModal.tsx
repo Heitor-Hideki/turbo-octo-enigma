@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Form, Modal } from "react-bootstrap"
 import { useContacts } from "../context/ContactsProvider"
-import { useConversations } from "./ConversationsProvider"
+import { useConversations } from "../context/ConversationsProvider"
 
 interface INewConversationModal {
     closeModal: Function
